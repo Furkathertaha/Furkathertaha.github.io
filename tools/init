@@ -99,6 +99,8 @@ init_files() {
     _sedi "s/^img_cdn:.*/img_cdn:/;s/^avatar:.*/avatar:/" _config.yml
   fi
 
+  echo "progress"
+
   # remove the other files
   rm -rf _posts/*
 
