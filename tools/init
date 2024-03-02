@@ -65,7 +65,7 @@ _check_init() {
     fi
   fi
 
-  #_has_inited=false #force to initialize
+  _has_inited=false #force to initialize
 
   if $_has_inited; then
     echo "Already initialized."
