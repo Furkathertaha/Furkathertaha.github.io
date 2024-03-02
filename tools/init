@@ -116,9 +116,13 @@ commit() {
 
 main() {
   check_env
+  echo "done step 1"
   checkout_latest_release
+  echo "done step 2"
   init_files
+  echo "done step 3"
   commit
+  echo "All done"
 }
 
 while (($#)); do
