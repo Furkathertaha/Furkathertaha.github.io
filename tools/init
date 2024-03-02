@@ -65,7 +65,7 @@ _check_init() {
     fi
   fi
 
-  _has_inited=false #force to initialize
+  #_has_inited=false #force to initialize
 
   if $_has_inited; then
     echo "Already initialized."
@@ -81,7 +81,7 @@ check_env() {
 
 checkout_latest_release() {
   hash=$(git log --grep="chore(release):" -1 --pretty="%H")
-  echo "test"
+  echo "test success for the first"
   git reset --hard "$hash"
 }
 
@@ -116,9 +116,10 @@ commit() {
 }
 
 main() {
+  cd ../
   check_env
   echo "done step 1"
-  #checkout_latest_release
+  checkout_latest_release
   echo "done step 2"
   init_files
   echo "done step 3"
