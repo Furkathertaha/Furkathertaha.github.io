@@ -81,7 +81,7 @@ check_env() {
 
 checkout_latest_release() {
   hash=$(git log --grep="chore(release):" -1 --pretty="%H")
-  echo "test success for the first"
+  echo "test success"
   git reset --hard "$hash"
 }
 
