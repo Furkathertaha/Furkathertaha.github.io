@@ -14,32 +14,37 @@ timezone: Asia/Shanghai
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy # the main title
+title: Frankel Zhao
+#Chirpy # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the sub-title
+tagline: Zhiwei Zhao, - Frankel·Taha·Furkather
+#A text-focused Jekyll theme # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
-url: ""
+url: "https://Furkathertaha.github.io"
 
 github:
-  username: github_username # change to your github username
+  username: Furkathertaha 
+  #github_username # change to your github username
 
 twitter:
-  username: twitter_username # change to your twitter username
+  username: #twitter_username # change to your twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@domain.com # change to your email address
+  name: Frankel Zhao 
+  #your_full_name
+  email: sclzzzw@163.com 
+  #example@domain.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your twitter homepage
-    - https://github.com/username # change to your github homepage
+    - https://twitter.com #/username # change to your twitter homepage
+    - https://github.com/Furkathertaha #/username # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -78,17 +83,19 @@ pageviews:
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
 #
-theme_mode: # [light | dark]
+theme_mode: dark 
+# [light | dark]
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: "https://chirpy-img.netlify.app"
+img_cdn: #"https://chirpy-img.netlify.app"
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "/commons/avatar.jpg"
+avatar: "/assets/images/sample_36800-0.png" 
+#"/commons/avatar.jpg"
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
