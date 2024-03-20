@@ -14,7 +14,7 @@ A boat self-docking experiment based on RGBD camera and scene reconstruction, po
 ## Table of Contents
 
 - [Features](#features)
-- [Prerequisite](#Prerequisite)
+- [Prerequisite](#prerequisite)
 - [Usage](#usage)
 - [Demo](#demo)
 <!-- [Contributing](#contributing) -->
