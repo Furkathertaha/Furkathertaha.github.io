@@ -2,13 +2,15 @@
 layout: post
 title:  "threeJs Chinese Drogon Animation!"
 date: 2024-03-02 00:00:00 +/-0000
-categories: []
-tags: [cg]
+categories: [My Projects]
+tags: [CG]
 ---
 
 # SPACE STYLE DRAGON SCENE ANIMATION
 
 A WebGL-based Chinese dragon animation with STL loader and GLSL shader imposed via Three.js. 
+
+[Project Link on GitHub](https://github.com/Furkath/threeJS-GLSL_STL-3D-webpage-design)
 
 ## Table of Contents
 
@@ -76,12 +78,12 @@ A WebGL-based Chinese dragon animation with STL loader and GLSL shader imposed v
  
 ## Demo
 
-<img src="assets/images/l2.gif" alt="demo1" width="500"  /> &emsp;
-<img src="assets/images/l1.gif" alt="demo2" width="500"  />
+<img src="assets/images/threeJS/l2.gif" alt="demo1" width="500"  /> &emsp;
+<img src="assets/images/threeJS/l1.gif" alt="demo2" width="500"  />
 <!-- [demo1.gif](https://github.com/Furkathertaha/personal_cdn/blob/main/l2.gif)  &emsp; [demo2.gif](https://github.com/Furkathertaha/personal_cdn/blob/main/l1.gif) 
 -->
 -Screen Shots:
-<img src="assets/images/l2.png" alt="demo3" width="400"  /> &emsp;
-<img src="assets/images/l1.png" alt="demo4" width="400"  />
+<img src="assets/images/threeJS/l2.png" alt="demo3" width="400"  /> &emsp;
+<img src="assets/images/threeJS/l1.png" alt="demo4" width="400"  />
 <!-- [demo3.png](https://github.com/Furkathertaha/personal_cdn/blob/main/l2.png) &emsp; [demo4.png](https://github.com/Furkathertaha/personal_cdn/blob/main/l1.png)
 -->
