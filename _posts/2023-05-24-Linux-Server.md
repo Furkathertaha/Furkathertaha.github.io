@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Self-built Ubuntu Server!"
+title:  "Self-built Ubuntu Server"
 date: 2023-05-24 00:00:00 +/-0000
 categories: [My Notes]
 tags: [Software]

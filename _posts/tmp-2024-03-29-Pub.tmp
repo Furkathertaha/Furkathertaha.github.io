@@ -1,0 +1,35 @@
+---
+layout: post
+title:  "My Publications"
+date: 2024-03-29 00:00:00 +/-0000
+categories: [Notes]
+tags: [CG, ML, PBS]
+---
+
+## 1. [Research Gate](https://www.researchgate.net/publication/377625400_Extending_Fourier_Neural_Operators_to_Learn_Stiff_Chemical_Kinetics)
+-ML with M-FNO for coupled ODE system
+
+## 2. [under Final Review of CI’s 40th Int. Symp.]
+-ML with M-FNO for PDE system
+--paper attached with review comments
+
+## 3. [under Final Reivew of CNF J.]
+-Hybrid flame-simulation model with low-dimension manifold
+--paper attached with review comments
+
+## 4. [Arxiv](https://arxiv.org/abs/2403.12820)
+-ML for Cloth simulation
+
+
+
+## 5. [ASPACC2023-226](http://www.aspacc2023.org/motion.asp?siteid=1007516&menuid=49468&postid=697450&lgid=1)
+-Accleration algotithm for topological flame-PBS
+--paper attachedith review comments
+
+## 6. [ASPACC2023-244](http://www.aspacc2023.org/motion.asp?siteid=1007516&menuid=49468&postid=697450&lgid=1)
+-Method of Moment for 3D-MPM discretization
+--paper attached with review comments
+
+## 6. [ASPACC2023-249](http://www.aspacc2023.org/motion.asp?siteid=1007516&menuid=49468&postid=697450&lgid=1)
+-ML with M-FNO for ODE problem
+--material and certificate attached

@@ -3,7 +3,7 @@ layout: post
 title:  "Games Webinar Notes"
 date: 2024-02-28 00:00:00 +/-0000
 categories: [My Notes]
-tags: [CG, PBS]
+tags: [CG, PBS, Math]
 ---
 
 ## Side Tips
