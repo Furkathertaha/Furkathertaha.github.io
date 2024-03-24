@@ -121,22 +121,16 @@ Recall the relation $$v^{\pi}(s)$$, $$v^*(s)$$, $$Q^{\pi}(s,a)$$, and $$Q^*(s,a)
 
 $$
 \begin{aligned}
-%贝尔曼方程
-%V(s)的贝尔曼方程，选择所有a的期望回报， 也是Q函数的均值，
 V(s)&=E_a[Q(s, a)]  \\
 &~ \\
 V^\pi(s) &= E_{a \sim \pi(a \mid s)}E_{s\prime \sim p(s\prime \mid s, a)}[ r(s, a, s\prime) + \gamma V^\pi(s\prime)] \\
 &~ \\
 V^\pi(s) &= E_{a \sim \pi(a \mid s)}[Q^\pi(s, a)] \\
 &~ \\
-%Q(s,a)函数的贝尔曼方程
 Q^\pi(s, a) &= E_{s\prime \sim p(s\prime \mid s, a)} [r(s, a, s\prime) + \gamma E_{a\prime \sim \pi(a\prime \mid s\prime)}[Q^\pi(s\prime, a\prime)]] \\
-&~ \\
-%贝尔曼最优方程
-%V(s)函数的贝尔曼最优方程，实际上是直接选择所有a中的最大回报 ： 
+&~ \\ 
 V^*(s) &= \max\limits_a E_{s^\prime \sim p(s^\prime \mid s, a)}[r(s, a, s^\prime) + \gamma V^*(s^\prime)] \\
 &~ \\
-%Q(s,a)函数的贝尔曼最优方程 
 Q^*(s, a) &= E_{s^\prime \sim p(s^\prime \mid s, a)}[r(s, a, s^\prime) + \gamma \max\limits_{a\prime} Q^*(s^\prime, a^\prime)], \\
 &~ \\
 and~~~v^*(s)&=Q^*(s,\pi_*(s))=\max\limits_{a}Q(s,a). 
@@ -195,7 +189,6 @@ $$
 \begin{aligned}
  -1- (\frac{\gamma K_*}{1-\gamma K_*})^2=  K_* - &\gamma K_*(1+ \frac{\gamma K_*}{1-\gamma K_*})^2 \\
   \Rightarrow ~~~  \gamma ^2 K_*^3 +(2 \gamma^2 -2 \gamma) K_*^2 &+ (1-3 \gamma) K_* +1 =0 \\
-  %\Rightarrow ~~~  0.9 ^2 K_*^3 +(2\times0.9^2 -2\times0.9) K_*^2 &+ (1-3 \times0.9) K_* +1 =0.
 \end{aligned}
 $$
 
