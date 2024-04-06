@@ -71,26 +71,28 @@ In this scenario, only $$\lambda_j = 0$$ and $$p_i \neq 0$$ holds. No need at al
 and $$\lambda_j \neq 0$$ with $$p_i = 0$$ would yield no solution.
 In general, we only consider one of $$\lambda$$ and $$p$$ is 0, to see if a valid solution can be derived. 
 
-Another important feature for inequailty constraint optimization is, signs of $$lambda$$ can be determined.
+Another important feature for inequailty constraint optimization is, signs of $$\lambda$$ can be somehow infered.
 That is because when letting $$\nabla L = 0$$, we are indeed finding extrema of $$L$$.  
 From KKT, constraints are actived only when equality,
 where $$\frac{C(x')}{||C(x')||}\nabla C$$ ($$x'$$ is an inequailty position) is the normal direction not violating the constraint.      
-If $$f(x)$$ is to be maxmized, $$-\lambda C(x)$$ should be positive sign:     
+If $$f(x)$$ is to be maxmized, consider $$-\lambda C(x)$$ :     
 $$\nabla f$$ is the direction in which $$f(x)$$ increases,
-which should be opposite (just normal component of $$\nabla f$$ with respect to the constraint hypersurface) to $$\frac{C(x')}{||C(x')||}\nabla C$$ in which the constraint is satisfied, if it is the optimal point.
+which should be opposite (just normal component of $$\nabla f$$ with respect to the constraint hypersurface) to $$\frac{C(x')}{||C(x')||}\nabla C$$ only in which the constraint is satisfied, if it is the optimal point.
 So you don't find further increase of $$f(x)$$ within the constraint.   
-If $$f(x)$$ is to be minimized, $$-\lambda C(x)$$ should be negative sign:  
+If $$f(x)$$ is to be minimized, consider $$-\lambda C(x)$$:  
 $$-\nabla f$$ is the direction in which $$f(x)$$ decreases,
-which should be opposite (just normal component of $$\nabla f$$ with respect to the constraint hypersurface) to $$\frac{C(x')}{||C(x')||}\nabla C$$ in which the constraint is satisfied, if it is the optimal point.
+which should be opposite (just normal component of $$\nabla f$$ with respect to the constraint hypersurface) to $$\frac{C(x')}{||C(x')||}\nabla C$$ only in which the constraint is satisfied, if it is the optimal point.
 So you don't find further decrease of $$f(x)$$ within the constraint.   
-Otherwise, in each above case, obtaining extrema of $$L$$ encourages either to violate constraints or not to optimize $$f(x)$$,
-but not to acheive both we want.
+However, we have many constraints, so it is a combined effect. If you know more features about
+the constraint functions and optimization function, a clearer sign might be concluded.
+<!--Otherwise, in each above case, obtaining extrema of $$L$$ encourages either to violate constraints or not to optimize $$f(x)$$,
+but not to acheive both we want.-->
 Also, signs of $$C(x)$$ are known from the constraints, so we can determine signs of corresponding $$\lambda$$.
 
 <img src="assets/images/Notes/signLambda.png" alt="illu1" width="400" />
 
 In above figure, the same constraints can yield two extremas of $$L$$.
 Depending on whether it is $$\max f(x)$$ or $$\min f(x)$$, the sign of $$\lambda$$ is different, so as the final solution.
-Of course you can solve for both signs of $$\lambda$$ and compare each $$f(x)$$ magnitude, but it is not efficient.
+Of course you can solve for both signs of $$\lambda$$ and compare each $$f(x)$$ magnitude, but sometimes it is not efficient.
 
 # Dual Problem for Lagrange Multiplier
