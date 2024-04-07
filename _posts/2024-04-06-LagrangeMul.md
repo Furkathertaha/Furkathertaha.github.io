@@ -117,3 +117,31 @@ There's another intuitive but not rigorous derivation. In each above case, obtai
 but not to acheive both we want.
 
 # Dual Problem for Lagrange Multiplier
+
+Suppose we want to maximize $$f(x)$$ with constraints $$C(x)$$ and denote the solution as $$x^*$$,
+then we know $$\max L(x) \geq L(x^*)$$. If just like previous $$L^2$$ norm optimization and linear hyper-planes,
+the sign of $$L(x)-f(x)=-\sum \lambda_iC(x)$$ must also be positive signs.
+It then has $$\max L(x) \geq L(x^*) \geq f(x^*)$$.
+The dual problem is designed to simplify the orignal optimization, the constraint of $$C(x)$$ is sometimes tedious
+to process especially for multi-combinations of inequailty constraints (judge of 0 for $$\lambda_i$$ and $$C_i(x)$$).
+Therefore, if we get the relation of $$\lambda$$ and $$x$$ by resolving $$\max L(x,\lambda)$$, we can define $$\max L(x,\lambda)$$ solely as $$q(\lambda)$$.
+Indeed, the constraint $$C(x)$$ can be violated if $$\lambda$$ is not constrained from its relation with $$x$$ and $$C(x)$$.
+But it doesn't matter, as it is always $$q(\lambda) \geq f(x^*)$$ no matter what the $$\lambda$$ is.
+So if we have $$\min q(\lambda)$$ with the solution $$\lambda^*$$.
+And if under Slater Condition, one can indeed has $$q(\lambda^*)=f(x^*)$$, so here $$\lambda^*$$ derives $$x^*$$ and vice versa.
+Thus, both the dual problem and orignal problem are simultaneously solved.    
+
+In conclusion, $$q(\lambda)\geq q(\lambda^*)\geq f(x^*) \geq f(x)$$.    
+If $$q(\lambda^*) = f(x^*)$$,
+$$\min q(\lambda) = \min_\lambda \big( \max_x L(x,\lambda)\big)$$ is the strong dual problem. And solving this dual problem gives the same solution as the orginal one.   
+If $$q(\lambda^*) > f(x^*)$$,
+$$\min q(\lambda) = \min_\lambda \big( \max_x L(x,\lambda)\big)$$ is the weak dual problem.
+Solving this dual problem gives an <font color=red> approximate or slack solution </font> for the orginal one.   
+From my point of view,
+whether this "=" can hold or not should depend on whether the original constraint $$C(x)$$ can be maintained at $$\lambda^*$$ with corresponding $$x$$.
+
+Lagrange Multiplier and Dual Porblem also have much evidence in SVM for machine learning, a reference can be found [here](https://www.bilibili.com/video/BV13r4y1z7AG/?spm_id_from=333.1007.top_right_bar_window_history.content.click&vd_source=c5491107713fb9e34e48ab93f260f495).
+
+
+
+
