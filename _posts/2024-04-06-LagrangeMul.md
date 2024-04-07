@@ -71,28 +71,49 @@ In this scenario, only $$\lambda_j = 0$$ and $$p_i \neq 0$$ holds. No need at al
 and $$\lambda_j \neq 0$$ with $$p_i = 0$$ would yield no solution.
 In general, we only consider one of $$\lambda$$ and $$p$$ is 0, to see if a valid solution can be derived. 
 
-Another important feature for inequailty constraint optimization is, signs of $$\lambda$$ can be somehow infered.
+Another important feature for inequailty constraint optimization is, signs of $$\lambda$$ can be infered under good conditions.
 That is because when letting $$\nabla L = 0$$, we are indeed finding extrema of $$L$$.  
 From KKT, constraints are actived only when equality,
-where $$\frac{C(x')}{||C(x')||}\nabla C$$ ($$x'$$ is an inequailty position) is the normal direction not violating the constraint.      
-If $$f(x)$$ is to be maxmized, consider $$-\lambda C(x)$$ :     
-$$\nabla f$$ is the direction in which $$f(x)$$ increases,
+where $$\frac{C(x')}{||C(x')||}\nabla C$$ ($$x'$$ is an inequailty position) is the normal direction not violating the constraint. 
+Moving towards such direction, the point is no longer extrema,
+but $$f(x)$$ may be further optimized if the orginal extrema dose not give global maximum or minimum.
+Just find an extrema dose not guarantee the final optimal solution.<font color=red>We can, however, save part of the comparison by determining signs of multipliers.</font>
+
+For each constraint, if $$f(x)$$ is to be maxmized, the sign of $$-\lambda C(x)$$ should be positive:     
+On constraint hyper-surface, $$\nabla f$$ is the direction in which $$f(x)$$ increases,
 which should be opposite (just normal component of $$\nabla f$$ with respect to the constraint hypersurface) to $$\frac{C(x')}{||C(x')||}\nabla C$$ only in which the constraint is satisfied, if it is the optimal point.
 So you don't find further increase of $$f(x)$$ within the constraint.   
-If $$f(x)$$ is to be minimized, consider $$-\lambda C(x)$$:  
-$$-\nabla f$$ is the direction in which $$f(x)$$ decreases,
+For each constraint, if $$f(x)$$ is to be minimized, the sign of $$-\lambda C(x)$$ should be negative:  
+On constraint hyper-surface, $$-\nabla f$$ is the direction in which $$f(x)$$ decreases,
 which should be opposite (just normal component of $$\nabla f$$ with respect to the constraint hypersurface) to $$\frac{C(x')}{||C(x')||}\nabla C$$ only in which the constraint is satisfied, if it is the optimal point.
 So you don't find further decrease of $$f(x)$$ within the constraint.   
 However, we have many constraints, so it is a combined effect. If you know more features about
 the constraint functions and optimization function, a clearer sign might be concluded.
-<!--Otherwise, in each above case, obtaining extrema of $$L$$ encourages either to violate constraints or not to optimize $$f(x)$$,
-but not to acheive both we want.-->
-Also, signs of $$C(x)$$ are known from the constraints, so we can determine signs of corresponding $$\lambda$$.
+
+For example, let's consider a well-defined situation where we can indeed determine the sign of each $$\lambda$$.
+If the optimized term $$f(x)$$ is a $$L2$$ norm $$||\sum x_i^2||$$, whether miximized or minimized,
+it can construct a high-dimension sphere in Euclidean space.
+Suppose every constraint is a high-dimension linear plane $$\sum w_i x_i+b=0$$, then good things come.
+That is, when dealing each constraint individually, $$\nabla f$$ is parallel to $$\nabla C$$ to be the extrema,
+and $$\frac{C(x')}{||C(x')||}\nabla C$$ must have different sign with $$\nabla f$$ if maxmized and $$-\nabla f$$ if minimized,
+Just as stated before. However, in such scenario, even we combine all constraints, at optimal point,
+$$\nabla f$$ is still the linear combination of each individual base direction, where the sign of each cannot be changed.
+This is because, high-dimension linear plane has uniform gradient direction, so you don't need to change $$\nabla C$$ from individual
+situation to golobal optimal point. Additionally, a sphere is convex everywhere (only positive weights from different directions for a middle position; <font color=red>why the optimal is in middle of individual positions? because for a sphere and linear planes, the intersection of intersectable planes must correspond to the pointing in middel of individual tagential positions!</font>), so when doing linear combination,
+you should never change the sign of each base vector regardless of sphere radius change, at most you multiply with 0 for equality constraint not activated here.
+Observing these properties, construct from individual extremas to global extrema would be more informative.
+Below is a simple example.
 
 <img src="assets/images/Notes/signLambda.png" alt="illu1" width="400" />
 
-In above figure, the same constraints can yield two extremas of $$L$$.
+In above illustration figure, the same constraints can yield two extremas of $$L$$.
 Depending on whether it is $$\max f(x)$$ or $$\min f(x)$$, the sign of $$\lambda$$ is different, so as the final solution.
-Of course you can solve for both signs of $$\lambda$$ and compare each $$f(x)$$ magnitude, but sometimes it is not efficient.
+<font color=red>Sometimes, you still need to compare multiple extremas even signs of multiplier are determined.</font>
+Of course you can solve for both signs of $$\lambda$$ and compare each $$f(x)$$ magnitude,
+but if you can actually know the sign like above case, why not save part of the calculation?
+
+Now, signs of $$C(x)$$ are known from the constraints, so we can determine signs of corresponding $$\lambda$$.
+There's another intuitive but not rigorous derivation. In each above case, obtaining extrema of $$L$$ encourages either to violate constraints or not to optimize $$f(x)$$,
+but not to acheive both we want.
 
 # Dual Problem for Lagrange Multiplier
